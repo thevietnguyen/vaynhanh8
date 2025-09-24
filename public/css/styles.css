@@ -20,6 +20,13 @@
   font-display: swap;
 }
 
+@font-face{
+  font-family:"bootstrap-icons";
+  src:url("/vaynhanh8/public/font/bootstrap-icons.woff2") format("woff2"),
+  url("/vaynhanh8/public/font/bootstrap-icons.woff")  format("woff");
+  font-weight:normal;
+  font-style:normal;
+}
 html, body{
   font-family: 'Fz Poppins';
   -webkit-font-smoothing: antialiased;
@@ -797,7 +804,7 @@ a{text-decoration:none}
   color:#fff;
   padding: 56px 0 44px;
   background: linear-gradient(58.25deg, #D40735 15.73%, #BA2173 85.27%);
-  height: 510px;
+  height: 550px;
 }
 
 .site-footer .container {
@@ -812,8 +819,10 @@ a{text-decoration:none}
 
 .site-footer .ft-text{
   margin:0;
-  line-height:1.75;
+  line-height:140%;
   opacity:.95;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .ft-brand{
@@ -857,12 +866,13 @@ a{text-decoration:none}
   margin: 40px auto;
 }
 
-.ft-copy{ margin:0 0 10px; font-weight:400; }
+.ft-copy{ margin:0 0 10px; font-weight:300; }
 .ft-desc{
   margin:0;
   line-height:1.9;
   opacity:.95;
-  font-size:14px;
+  font-size:16px;
+  font-weight: 400;
 }
 
 
@@ -873,9 +883,9 @@ a{text-decoration:none}
 .site-footer .ft-heading{
   margin: 0 0 8px;
   font-weight:700;
-  font-size:18px;
+  font-size:16px;
 }
-.site-footer .ft-text{ margin:0; line-height:1.75; opacity:.95; }
+/*.site-footer .ft-text{ margin:0; line-height:1.75; opacity:.95; }*/
 
 .site-footer a{ color:#fff; text-decoration:none; }
 
@@ -886,13 +896,12 @@ a{text-decoration:none}
 
 
 .ft-col-center{
-  max-width: 360px;
+  width: 420px;
   margin-left: 200px;
   margin-right: auto;
 }
 
 
-/* ======== HERO CHI TIẾT ======== */
 .hero-detail{ background:#ffffff; padding:72px 0 50px; }
 .hero-detail.is-hidden{ display:none; }
 
@@ -1665,6 +1674,14 @@ a{text-decoration:none}
     margin-top: 28px;
   }
 
+  .ft-desc {
+    margin: 0;
+    line-height: 1.9;
+    opacity: .95;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
 }
 
 .popup-overlay {
@@ -1808,16 +1825,13 @@ a{text-decoration:none}
   .process-section .process-dots{ display: none; }
 }
 
-/* MOBILE ONLY: hide hero-4h block */
 @media (max-width: 767.98px){
-  /* tùy dự án bạn đang đặt id/class như nào, mình cover cả 3 khả năng phổ biến */
   #hero-4h,
   .hero-4h,
   .hero-4h-section{
     display: none !important;
   }
 
-  /* Nếu có khoảng cách top sau khi ẩn, ép section kế tiếp sát lên */
   #hero-4h + section,
   .hero-4h + section,
   .hero-4h-section + section{
@@ -1828,7 +1842,6 @@ a{text-decoration:none}
     display: none !important;
   }
 
-  /* bỏ khoảng cách thừa của benefit-section */
   .benefit-section{
     margin-top: 0 !important;
     padding-top: 24px !important;

@@ -240,7 +240,6 @@ $(document).ready(function() {
                       url: `${env.backEndApi}/api/lead/send`,
                       data: JSON.stringify(data),
                       complete: function (response) {
-                        // THÀNH CÔNG CUỐI CÙNG
                         sendWarehouseProcessRequest(formId, "Thành công");
                         closeAllPopups();
                         showPopup({
