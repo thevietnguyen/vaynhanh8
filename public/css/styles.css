@@ -1902,7 +1902,7 @@ a{text-decoration:none}
 }
 
 .lf-round-btn{
-  width: 52px; height: 52px; border-radius: 50%;
+  width: 40px; height: 40px; border-radius: 50%;
   display: grid; place-items: center; text-decoration: none;
   background: linear-gradient(159.13deg, #D40735 -24.13%, #BA2173 132.21%);
   box-shadow: 0 12px 28px rgba(0,0,0,.18);
