@@ -973,34 +973,40 @@
     </div>
     <div id="otpPopup" class="popup-overlay">
       <div class="popup-card">
-        <!-- Icon mới -->
         <img src="images/otp-verify.png" alt="Xác nhận OTP" class="popup-icon" style="width: 64px; height: 64px; margin-bottom: 12px;">
-
-        <!-- Tiêu đề -->
         <h3 class="popup-title" style="color: rgba(237, 27, 36, 1); font-size: 19px; line-height: 128%; margin-bottom: 16px; font-weight: 700">
           Quý khách vui lòng<br> xác nhận số điện thoại<br> để tiếp tục đăng ký
         </h3>
-
-        <!-- Hướng dẫn -->
         <p class="otp-instruction">Quý khách vui lòng mở tin nhắn Zalo từ tài khoản LOTTE Finance để nhận mã OTP và nhập dưới đây.</p>
-
-        <!-- Các ô nhập OTP (vẫn giữ 6 ô để tương thích logic) -->
         <div class="otp-field">
           <input type="tel" class="otp-input" id="otp-input-main" maxlength="6" pattern="\d*" inputmode="numeric" />
         </div>
-
-        <!-- Hướng dẫn phụ và đồng hồ đếm ngược -->
         <p class="otp-instruction">Nếu Quý khách không có tài khoản Zalo, vui lòng kiểm tra tin nhắn điện thoại (SMS)</p>
         <p id="countdown" class="otp-countdown"></p>
-
-        <!-- Nút bấm bằng ảnh -->
         <a href="#" id="btn-change-phone" class="popup-btn-img">
           <img src="images/change-phone-btn.png" alt="Thay đổi số điện thoại">
         </a>
-
-        <!-- Input ẩn để lưu id form trước đó -->
         <input type="hidden" id="prev-form" />
       </div>
+    </div>
+    <div class="lf-sticky-cta" id="lf-sticky-cta" aria-label="Khối hành động nổi">
+      <a class="lf-counter" href="#khach-hang" aria-label="Khách hàng đã vay">
+    <span class="lf-counter-icon">
+      <img src="images/icon-users.png" alt="">
+    </span>
+        <div class="lf-counter-text">
+          <div id="scrolling-counter" class="scrolling-counter"></div>
+          <small>Khách hàng đã vay<br>tại LOTTE Finance</small>
+        </div>
+      </a>
+
+      <a class="lf-round-btn lf-phone" href="tel:1900633070" aria-label="Gọi hotline">
+        <img src="images/icon-phone.png" alt="">
+      </a>
+
+      <a class="lf-round-btn lf-chat" href="https://m.me/LOTTEFinanceVietnam?locale=vi_VN" aria-label="Nhắn tin tư vấn">
+        <img src="images/icon-chat.png" alt="">
+      </a>
     </div>
 
 
@@ -1552,6 +1558,103 @@
         hamburgerBtn.setAttribute('aria-expanded', 'false');
       });
     });
+  })();
+  (() => {
+    const initializeCounter = (widgetSelector, containerSelector) => {
+      const counterWidget = document.querySelector(widgetSelector);
+      const counterContainer = document.querySelector(containerSelector);
+      let continuousUpdateInterval = null;
+
+      if (counterWidget && counterContainer) {
+        const startDate = new Date('2025-08-06T00:00:00+07:00');
+        const startValue = 396750;
+        const incrementPerDay = 15000;
+        const minValue = 800000;
+        const maxValue = 1000000;
+        const MS_PER_DAY = 86400000;
+        const wrapToRange = (val) => {
+          const range = maxValue - minValue;
+          return ((val - minValue) % range + range) % range + minValue;
+        };
+
+        const calculatePreciseCurrentValue = () => {
+          const now = new Date();
+          const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+          const elapsedFullDays = Math.max(0, Math.floor((todayStart.getTime() - startDate.getTime()) / MS_PER_DAY));
+          const baseValueForToday = startValue + (elapsedFullDays * incrementPerDay);
+          const msPassedToday = now.getTime() - todayStart.getTime();
+          const fractionOfDayPassed = msPassedToday / MS_PER_DAY;
+          const incrementToday = fractionOfDayPassed * incrementPerDay;
+          const rawValue = baseValueForToday + incrementToday;
+
+          return rawValue >= maxValue ? wrapToRange(rawValue) : rawValue;
+        };
+
+        const createCounterStructure = (valueString) => {
+          counterContainer.innerHTML = '';
+          for (let char of valueString) {
+            if (!isNaN(parseInt(char))) {
+              const digitRoller = document.createElement('div');
+              digitRoller.className = 'digit-roller';
+              let innerHTML = '';
+              for (let i = 0; i <= 9; i++) innerHTML += `<span>${i}</span>`;
+              digitRoller.innerHTML = innerHTML;
+              counterContainer.appendChild(digitRoller);
+            } else {
+              const separator = document.createElement('div');
+              separator.className = 'digit-separator';
+              separator.textContent = char;
+              counterContainer.appendChild(separator);
+            }
+          }
+        };
+
+        const updateCounterDisplay = (targetValue) => {
+          const targetString = Math.floor(targetValue).toLocaleString('vi-VN');
+          const digitHeight = 20;
+
+          if (targetString.length !== counterContainer.querySelectorAll('.digit-roller, .digit-separator').length) {
+            createCounterStructure(targetString);
+          }
+
+          const digitRollers = counterContainer.querySelectorAll('.digit-roller');
+          let rollerIndex = 0;
+          for (let char of targetString) {
+            if (!isNaN(parseInt(char))) {
+              const digit = parseInt(char);
+              const roller = digitRollers[rollerIndex];
+              if (roller) {
+                roller.style.transform = `translateY(-${digit * digitHeight}px)`;
+              }
+              rollerIndex++;
+            }
+          }
+        };
+
+        const initialValue = calculatePreciseCurrentValue();
+        createCounterStructure(Math.floor(initialValue).toLocaleString('vi-VN'));
+        updateCounterDisplay(initialValue);
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              if (!continuousUpdateInterval) {
+                continuousUpdateInterval = setInterval(() => {
+                  const newValue = calculatePreciseCurrentValue();
+                  updateCounterDisplay(newValue);
+                }, 1000);
+              }
+            } else {
+              clearInterval(continuousUpdateInterval);
+              continuousUpdateInterval = null;
+            }
+          });
+        }, { threshold: 0.1 });
+
+        observer.observe(counterWidget);
+      }
+    };
+    initializeCounter('.lf-sticky-cta .lf-counter', '#scrolling-counter');
   })();
 </script>
 </body>
