@@ -22,8 +22,8 @@
 
 @font-face{
   font-family:"bootstrap-icons";
-  src:url("/vaynhanh8/public/font/bootstrap-icons.woff2") format("woff2"),
-  url("/vaynhanh8/public/font/bootstrap-icons.woff")  format("woff");
+  src:url("../font/bootstrap-icons.woff2") format("woff2"),
+  url("../font/bootstrap-icons.woff")  format("woff");
   font-weight:normal;
   font-style:normal;
 }
