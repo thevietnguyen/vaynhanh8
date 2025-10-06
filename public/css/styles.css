@@ -1889,6 +1889,7 @@ a{text-decoration:none}
 .scrolling-counter {
   display: flex; height: 20px; line-height: 20px;
   font-size: 16px; font-weight: 400; overflow: hidden; color: #fff;
+  font-family: Arial;
 }
 .digit-roller {
   display: inline-block;

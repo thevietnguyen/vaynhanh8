@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>LOTTE Finance • Vay nhanh 4h</title>
+  <title>LOTTE Finance - TMC</title>
   <link href="js/dist/bootstrap.min.css" rel="stylesheet">
   <link href="js/dist/bootstrap-icons.css" rel="stylesheet">
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -12,21 +12,32 @@
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-THN4FHV5');</script>
   <!-- End Google Tag Manager -->
-  <link href="./css/styles.css" rel="stylesheet">
-<!--  <base id="app-base" href="/">-->
+  <link id="main-styles" href="./css/styles.css" rel="stylesheet">
+
+  <!-- SCRIPT TỰ ĐỘNG TẠO THẺ BASE -->
   <script>
     (function () {
-      if (location.port === '63342') {
-        var base = document.getElementById('app-base');
-        if (base) base.setAttribute('href', '/vaynhanh8/public/');
-        var want = '/vaynhanh8/public/index.html';
-        if (!location.pathname.endsWith('/public/index.html')) {
-          var newUrl = want + (location.hash || '');
-          history.replaceState(null, '', newUrl);
-        }
-      }
+      const mainCssPath = document.getElementById('main-styles').href;
+      const basePath = mainCssPath.replace('css/styles.css', '');
+      const baseTag = document.createElement('base');
+      baseTag.setAttribute('href', basePath);
+      document.head.prepend(baseTag);
     })();
   </script>
+
+<!--  <script>-->
+<!--    (function () {-->
+<!--      if (location.port === '63342') {-->
+<!--        var base = document.getElementById('app-base');-->
+<!--        if (base) base.setAttribute('href', '/vaynhanh8/public/');-->
+<!--        var want = '/vaynhanh8/public/index.html';-->
+<!--        if (!location.pathname.endsWith('/public/index.html')) {-->
+<!--          var newUrl = want + (location.hash || '');-->
+<!--          history.replaceState(null, '', newUrl);-->
+<!--        }-->
+<!--      }-->
+<!--    })();-->
+<!--  </script>-->
 
 </head>
 <body class="mode-figma">
@@ -156,7 +167,7 @@
             </a>
           </div>
           <div class="hero-detail-img">
-            <img data-field="image" src="images/loan-ccvc.png" alt="Công chức, viên chức nhà nước" />
+            <img data-field="image" src="images/big-register-button.png" alt="Công chức, viên chức nhà nước" />
           </div>
         </div>
       </div>
@@ -1330,7 +1341,6 @@
     }
 
     function renderApplyForm() {
-      // Ẩn các phần không cần thiết
       $hero4h?.classList.add('is-hidden');
       $detail?.classList.add('is-hidden');
       $body.classList.remove('mobile-detail-view-is-open');
@@ -1350,14 +1360,7 @@
       $applyFormSection?.classList.add('is-hidden');
     }
 
-    const BASE = (() => {
-      const b = document.querySelector('base');
-      if (b) {
-        const p = new URL(b.getAttribute('href') || '/', location.origin).pathname;
-        return p.endsWith('/') ? p : p + '/';
-      }
-      return '/vaynhanh8/';
-    })();
+    const BASE = '/';
     const joinBase  = s => (BASE + String(s||'').replace(/^\/+/, '')).replace(/\/{2,}/g, '/');
     const stripBase = p => (p.startsWith(BASE) ? p.slice(BASE.length) : p).replace(/^\/+/, '');
     const currentSlug = () => stripBase(location.pathname).split('/')[0] || '';
@@ -1401,7 +1404,7 @@
     // }
     window.go = function(pathOrKey) {
       const slug = (slugMap?.[pathOrKey] ?? String(pathOrKey || '')).replace(/^\/+/, '');
-      const finalPath = joinBase(slug); // -> /vaynhanh8/<slug>
+      const finalPath = joinBase(slug);
       if (finalPath !== location.pathname) {
         history.pushState({ path: finalPath }, '', finalPath);
       }
@@ -1421,7 +1424,7 @@
         const card = e.currentTarget.closest('.loan-card');
         if (!card) return;
         if (card.classList.contains('is-active-detail')) {
-          const baseSlug = currentSlug();                         // <<-- dùng helper có sẵn
+          const baseSlug = currentSlug();
           go(baseSlug ? `${baseSlug}/loan-application` : 'loan-application');
         } else {
           const key = card.dataset.loan;
