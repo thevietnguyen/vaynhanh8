@@ -1898,7 +1898,13 @@ a{text-decoration:none}
 .digit-separator { display: inline-block; padding: 0 1px; }
 .lf-counter-text small { margin-top: 0; }
 .lf-counter small{
-  display: block; margin-top: 2px; line-height: 140%; font-weight: 400; opacity: .95; font-size: 8px;
+  display: block;
+  margin-top: 2px;
+  line-height: 140%;
+  font-weight: 400;
+  font-family: Arial;
+  opacity: .95;
+  font-size: 8px;
 }
 
 .lf-round-btn{

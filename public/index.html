@@ -1356,7 +1356,6 @@
         const p = new URL(b.getAttribute('href') || '/', location.origin).pathname;
         return p.endsWith('/') ? p : p + '/';
       }
-      // fallback (Vite cũng sẽ build đúng vì có base trong vite.config)
       return '/vaynhanh8/';
     })();
     const joinBase  = s => (BASE + String(s||'').replace(/^\/+/, '')).replace(/\/{2,}/g, '/');
