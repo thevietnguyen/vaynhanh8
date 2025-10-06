@@ -13,7 +13,7 @@
   })(window,document,'script','dataLayer','GTM-THN4FHV5');</script>
   <!-- End Google Tag Manager -->
   <link href="./css/styles.css" rel="stylesheet">
-  <base id="app-base" href="/vaynhanh8/">
+<!--  <base id="app-base" href="/">-->
   <script>
     (function () {
       if (location.port === '63342') {
@@ -1356,7 +1356,6 @@
         const p = new URL(b.getAttribute('href') || '/', location.origin).pathname;
         return p.endsWith('/') ? p : p + '/';
       }
-      // fallback (Vite cũng sẽ build đúng vì có base trong vite.config)
       return '/vaynhanh8/';
     })();
     const joinBase  = s => (BASE + String(s||'').replace(/^\/+/, '')).replace(/\/{2,}/g, '/');
