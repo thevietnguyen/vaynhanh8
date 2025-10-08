@@ -149,7 +149,7 @@
           </ul>
           <p class="detail-note is-hidden">(*) Lãi suất tính trên dư nợ ban đầu.</p>
           <a href="#dang-ky" class="btn-img">
-            <img src="images/big-register-button.png" alt="Đăng kí khoản vay" />
+            <img src="public/images/big-register-button.png" alt="Đăng kí khoản vay" />
           </a>
         </div>
         <div class="hero-detail-img">
@@ -1213,14 +1213,14 @@
     };
     const keyBySlug = Object.fromEntries(Object.entries(slugMap).map(([k, v]) => [v, k]));
 
-    const ASSET_BASE = './';
+    const ASSET_BASE = './public/';
     const asset = (p) => {
       if (/^(?:https?:)?\/\//.test(p) || p.startsWith('/')) return p;
       return (ASSET_BASE + p.replace(/^\/+/, '')).replace(/\/{2,}/g, '/');
     };
 
     const HERO_MEDIA = {
-      ccvc:     { src: asset("images/loan-ccvc.png"),     alt: 'Công chức, viên chức nhà nước' },
+      ccvc:     { src: asset('images/loan-ccvc.png'),     alt: 'Công chức, viên chức nhà nước' },
       nvvp:     { src: asset('images/loan-nvvp.png'),     alt: 'Nhân viên văn phòng' },
       congnhan: { src: asset('images/loan-congnhan.png'), alt: 'Công nhân' },
       tudoanh:  { src: asset('images/loan-tudoanh.png'),  alt: 'Chủ doanh nghiệp / Tự doanh' },

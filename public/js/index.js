@@ -153,17 +153,17 @@ $(document).ready(function() {
                         otpPopup.classList.add('is-visible');
                         startCountdown();
                       } else {
-                        showPopup({ type: 'error', title: 'Thất bại', customText: 'Tạo Mã OTP không thành công. Vui lòng thử lại sau.', iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' });
+                        showPopup({ type: 'error', title: 'Thất bại', customText: 'Tạo Mã OTP không thành công. Vui lòng thử lại sau.', iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' });
                       }
                     },
-                    error: function(err) { showPopup({ type: 'error', title: 'Thất bại', customText: 'Có lỗi xảy ra khi tạo OTP. Vui lòng thử lại!', iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' }); }
+                    error: function(err) { showPopup({ type: 'error', title: 'Thất bại', customText: 'Có lỗi xảy ra khi tạo OTP. Vui lòng thử lại!', iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' }); }
                   });
                 // });
               } else {
-                showPopup({ type: 'error', title: 'Thất bại', customText: 'Số điện thoại của Quý khách đã có trong hệ thống. Vui lòng gọi Hotline 1900 633 070 để được hỗ trợ!', iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' });
+                showPopup({ type: 'error', title: 'Thất bại', customText: 'Số điện thoại của Quý khách đã có trong hệ thống. Vui lòng gọi Hotline 1900 633 070 để được hỗ trợ!', iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' });
               }
             },
-            error: function (ex) { showPopup({ type: 'error', title: 'Thất bại', customText: 'Số điện thoại của Quý khách đã có trong hệ thống. Vui lòng gọi Hotline 1900 633 070 để được hỗ trợ!', iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' }); }
+            error: function (ex) { showPopup({ type: 'error', title: 'Thất bại', customText: 'Số điện thoại của Quý khách đã có trong hệ thống. Vui lòng gọi Hotline 1900 633 070 để được hỗ trợ!', iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' }); }
           });
       //   });
       // });
@@ -246,15 +246,15 @@ $(document).ready(function() {
                           type: 'success',
                           title: 'Thành công',
                           customText: 'Cảm ơn Quý khách đã đăng ký thông tin. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất!',
-                          iconSrc: 'images/success-icon.png',
-                          buttonSrc: 'images/close-btn.png',
+                          iconSrc: '/public/images/success-icon.png',
+                          buttonSrc: '/public/images/close-btn.png',
                           buttonAlt: 'Đóng'
                         });
                         $(formId)[0].reset();
                       },
                       error: function (ex) {
                         closeAllPopups();
-                        showPopup({ type: 'error', title: 'Thất bại', customText: 'Đăng ký chưa thành công, vui lòng kiểm tra lại thông tin.', iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' });
+                        showPopup({ type: 'error', title: 'Thất bại', customText: 'Đăng ký chưa thành công, vui lòng kiểm tra lại thông tin.', iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' });
                       },
                     });
                 //   });
@@ -264,14 +264,14 @@ $(document).ready(function() {
                 // OTP SAI
                 isOtpFailed = true;
                 closeAllPopups();
-                showPopup({ type: 'error', title: 'Thất bại', customText: 'OTP của Quý khách nhập chưa đúng hoặc đã hết hạn sử dụng. Vui lòng thử lại!', iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' });
+                showPopup({ type: 'error', title: 'Thất bại', customText: 'OTP của Quý khách nhập chưa đúng hoặc đã hết hạn sử dụng. Vui lòng thử lại!', iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' });
                 if(otpMainInput) otpMainInput.value = '';
               }
             },
             error: function (ex) {
               isOtpFailed = true;
               closeAllPopups();
-              showPopup({ type: 'error', title: 'Thất bại', customText: 'Xác thực OTP chưa thành công. Quý khách vui lòng thử lại!', iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' });
+              showPopup({ type: 'error', title: 'Thất bại', customText: 'Xác thực OTP chưa thành công. Quý khách vui lòng thử lại!', iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' });
               if(otpMainInput) otpMainInput.value = '';
             },
           });
@@ -288,11 +288,11 @@ $(document).ready(function() {
         let rsValidate = validate(formData);
         if (!rsValidate.valid) {
           const errorMessages = rsValidate.msg.split(/, /).filter(msg => msg.trim() !== '');
-          showPopup({ type: 'error', title: 'Thất bại', messages: errorMessages, iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' });
+          showPopup({ type: 'error', title: 'Thất bại', messages: errorMessages, iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' });
           return;
         }
         if (!formData.i_agree_terms_and_conditions) {
-          showPopup({ type: 'error', title: 'Thất bại', messages: ['Quý khách vui lòng đồng ý với chính sách & điều khoản dịch vụ!'], iconSrc: 'images/block.png', buttonSrc: 'images/back-btn.png', buttonAlt: 'Quay lại' });
+          showPopup({ type: 'error', title: 'Thất bại', messages: ['Quý khách vui lòng đồng ý với chính sách & điều khoản dịch vụ!'], iconSrc: '/public/images/block.png', buttonSrc: '/public/images/back-btn.png', buttonAlt: 'Quay lại' });
           return;
         }
         sendWarehouseProcessRequest(formId);
