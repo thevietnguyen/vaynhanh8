@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html><!doctype html>
+<!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8"/>
@@ -82,8 +73,8 @@
             <span>Tôi đồng ý với <a href="..." target="_blank">Điều khoản Xử lý dữ liệu cá nhân</a> và <a href="..." target="_blank">Điều khoản Giao dịch</a></span>
           </label>
           <small class="f-err" id="errAgree"></small>
-          <!-- Nút submit này không cần href, nó sẽ được xử lý bởi JS -->
-          <a href="#" id="btn-submit-main-form" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+
+          <a href="#dang-ky" id="btn-submit-main-form" class="btn-pack-img" aria-label="Đăng kí khoản vay">
             <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
           </a>
         </form>
@@ -930,5 +921,11 @@
 <script src="https://www.google.com/recaptcha/api.js?render=GOOGLE_SITE_KEY_TEMP"></script>
 
 </main>
+<script>
+  window.env = {
+    backEndApi: 'http://localhost:8080',
+    googleSiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+  };
+</script>
 </body>
 </html>
