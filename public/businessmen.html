@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>LOTTE Finance - TMC</title>
+    <link href="js/dist/bootstrap.min.css" rel="stylesheet">
+    <link href="js/dist/bootstrap-icons.css" rel="stylesheet">
+    <link id="main-styles" href="css/styles.css" rel="stylesheet">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-THN4FHV5');</script>
+</head>
+<body data-page-loan="tudoanh">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THN4FHV5"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="navbar-lf">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="brand d-flex align-items-center gap-3">
+            <img src="images/logo-nav.png" alt="LOTTE FINANCE" class="logo">
+        </a>
+
+        <nav class="menu main-menu d-none d-xl-flex gap-4 fw-bold">
+            <a href="#loi-ich">Lợi ích</a>
+            <a href="#goi-vay">Các gói vay</a>
+            <a href="#quy-trinh">Quy trình vay</a>
+            <a href="#tin-tuc">Tin tức</a>
+            <a href="#khach-hang">Khách hàng</a>
+            <a href="#ve-chung-toi">Về chúng tôi</a>
+            <a href="#faq">Q&A</a>
+        </nav>
+        <a id="menu-apply" href="#goi-vay" class="btn-img" aria-label="Đăng ký ngay">
+            <img src="images/register-button.png" alt="Đăng ký ngay">
+        </a>
+
+        <button id="hamburger-btn" class="btn-hamburger d-xl-none" type="button" aria-label="Mở menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+<main id="board">
+    <section id="hero-detail" class="hero-detail">
+        <div class="container">
+            <div class="hero-detail-card" id="hero-card">
+                <div class="hero-detail-left">
+                    <h2 class="hero-detail-title">Chủ doanh nghiệp, tự doanh</h2>
+                    <p class="hero-detail-sub">Vay vốn linh hoạt - Chủ động kinh doanh</p>
+                    <ul class="loan-stats kpi no-rate">
+                        <li>
+                            <div class="cap">Số tiền vay<br> (Tối đa)</div>
+                            <div class="val">40 triệu</div>
+                        </li>
+
+                        <li>
+                            <div class="cap">Lãi suất<br> (tạm tính)</div>
+                            <div class="val">1.98%/ tháng</div>
+                        </li>
+                        <li>
+                            <div class="cap">Thời gian<br>phê duyệt</div>
+                            <div class="val">4 giờ</div>
+                        </li>
+                    </ul>
+                    <h4 class="cond-title">Điều kiện</h4>
+                    <ul class="terms-list">
+                        <li>Chỉ cần cung cấp sao kê ngân hàng, Khách hàng là chủ hộ kinh doanh, chủ doanh nghiệp, kinh doanh online có thể được hỗ trợ khoản vay nhanh chóng, chớp cơ hội kinh doanh.</li>
+                        <li>Để tìm hiểu thêm về điều kiện vay, vui lòng đăng ký hoặc gọi Hotline 1900-633-070.</li>
+                    </ul>
+<!--                    <p class="detail-note">(*) Lãi suất tính trên dư nợ ban đầu.</p>-->
+                    <a href="loan-application.html" class="btn-img">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay" />
+                    </a>
+                </div>
+                <div class="hero-detail-img">
+                    <img src="images/loan-tudoanh.png" alt="Công chức, viên chức nhà nước" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ƯU ĐIỂM VƯỢT TRỘI -->
+<!--    <section id="loi-ich" class="benefit-section">-->
+<!--        <div class="container">-->
+<!--            <h3 class="benefit-title">Ưu điểm vượt trội</h3>-->
+
+<!--            <div class="benefit-grid">-->
+<!--                &lt;!&ndash; 1 &ndash;&gt;-->
+<!--                <article class="benefit-card">-->
+<!--                    <div class="benefit-inner">-->
+<!--                        <img src="images/credit-card.png" alt="" class="benefit-img">-->
+<!--                        <p class="benefit-text">-->
+<!--                            Duyệt vay đến <br><span class="hl">500 triệu đồng</span>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </article>-->
+
+<!--                &lt;!&ndash; 2 &ndash;&gt;-->
+<!--                <article class="benefit-card">-->
+<!--                    <div class="benefit-inner">-->
+<!--                        <img src="images/note.png" alt="" class="benefit-img">-->
+<!--                        <p class="benefit-text">Thủ tục <span class="hl">minh bạch</span> <br> giải ngân <span class="hl">nhanh chóng</span></p>-->
+<!--                    </div>-->
+<!--                </article>-->
+
+<!--                &lt;!&ndash; 3 &ndash;&gt;-->
+<!--                <article class="benefit-card">-->
+<!--                    <div class="benefit-inner">-->
+<!--                        <img src="images/calendar.png" alt="" class="benefit-img">-->
+<!--                        <p class="benefit-text">-->
+<!--                            Thời hạn cho vay <br><span class="hl">đến 60 tháng</span>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </article>-->
+
+<!--                &lt;!&ndash; 4 &ndash;&gt;-->
+<!--                <article class="benefit-card">-->
+<!--                    <div class="benefit-inner">-->
+<!--                        <img src="images/percent.png" alt="" class="benefit-img">-->
+<!--                        <p class="benefit-text">Lãi suất cạnh tranh<br><span class="hl">Chỉ từ 0.65%/tháng</span></p>-->
+<!--                    </div>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <!-- CÁC GÓI VAY -->
+    <section id="goi-vay" class="loanpack-section">
+        <div class="container">
+            <h3 class="loanpack-title">Các gói vay ưu đãi</h3>
+
+            <div class="loan-grid">
+                <!-- 1. Công chức, viên chức -->
+                <article class="loan-card" data-loan="ccvc" style="--img:url('../images/card-ccvc.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Công chức, viên chức nhà nước</h4>
+                    <p class="loan-sub">Hạn mức cao, lãi thấp, giải ngân nhanh</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">500 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Lãi suất<br>(Tạm tính)</span>
+                            <span class="val">0,65%/ tháng</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>Là cán bộ, công chức, viên chức… nhà nước với thu nhập ≥ 3 triệu đồng.</li>
+                        <li>Độ tuổi: 20–60.</li>
+                        <li>Khách hàng có HĐLĐ chính thức, thời gian làm việc chính thức ≥ 3 tháng.</li>
+                        <li>Thu nhập bình quân ≥ 4 triệu đồng.</li>
+                        <li>Nhận lương qua tài khoản Ngân hàng.</li>
+                        <li>Không có khoản vay mới trong 1 tháng gần nhất.</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="governmentofficer.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+
+                <!-- 2. Nhân viên văn phòng -->
+                <article class="loan-card" data-loan="nvvp" style="--img:url('../images/card-nvvp.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Nhân viên văn phòng</h4>
+                    <p class="loan-sub">Vay nhanh, thủ tục gọn, chỉ cần lương</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">500 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Lãi suất<br>(Tạm tính)</span>
+                            <span class="val">0,74%/ tháng</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>Đang làm việc chính thức tại các công ty với thu nhập chính thức chỉ từ 4 triệu đồng</li>
+                        <li>Độ tuổi: 20-60 (tại thời điểm kết thúc khoản vay không quá 60 tuổi).</li>
+                        <li>Khách hàng có HĐLĐ chính thức, thời gian làm việc chính thức ≥ 3 tháng.</li>
+                        <li>Thu nhập bình quân ≥ 4 triệu đồng.</li>
+                        <li>Nhận lương qua tài khoản Ngân hàng.</li>
+                        <li>Không có khoản vay mới trong 1 tháng gần nhất.</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="officeworker.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+
+                <!-- 3. Công nhân -->
+                <article class="loan-card" data-loan="congnhan" style="--img:url('../images/card-congnhan.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Công nhân</h4>
+                    <p class="loan-sub">Lương ổn định, vay dễ trong 4h</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">150 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Lãi suất<br>(Tạm tính)</span>
+                            <span class="val">1,5%/ tháng</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>Là cán bộ, công chức, viên chức… nhà nước với thu nhập ≥ 3 triệu đồng.</li>
+                        <li>Độ tuổi: 20-60 (tại thời điểm kết thúc khoản vay không quá 60 tuổi).</li>
+                        <li>Khách hàng có HĐLĐ chính thức, thời gian làm việc chính thức ≥ 3 tháng.</li>
+                        <li>Thu nhập bình quân ≥ 4 triệu đồng.</li>
+                        <li>Nhận lương qua tài khoản Ngân hàng.</li>
+                        <li>Không có khoản vay mới trong 1 tháng gần nhất.</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="worker.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+
+                <!-- 4. Chủ doanh nghiệp / Tự doanh -->
+                <article class="loan-card" data-loan="tudoanh" style="--img:url('../images/card-tudoanh.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Chủ doanh nghiệp, tự doanh</h4>
+                    <p class="loan-sub">Vay vốn linh hoạt - Chủ động kinh doanh</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">40 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>Chỉ cần cung cấp sao kê ngân hàng, Khách hàng là chủ hộ kinh doanh, chủ doanh nghiệp, kinh doanh online có thể được hỗ trợ khoản vay nhanh chóng, chớp cơ hội kinh doanh.</li>
+                        <li>Để tìm hiểu thêm về điều kiện vay, vui lòng đăng ký hoặc gọi Hotline 1900-633-070.</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="businessmen.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+
+                <!-- 5. Người có bảo hiểm nhân thọ -->
+                <article class="loan-card" data-loan="baohiem" style="--img:url('../images/card-baohiem.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Người có bảo hiểm nhân thọ</h4>
+                    <p class="loan-sub">Bảo hiểm trong tay, vay ngay dễ dàng</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">100 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Lãi suất<br>(Tạm tính)</span>
+                            <span class="val">1,92%/ tháng</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>Khách hàng hoặc vợ/chồng KH có hợp đồng bảo hiểm nhân thọ, đóng phí từ 5 triệu đồng/năm, đã mở được từ 6 tháng trở lên và còn hiệu lực.</li>
+                        <li>Độ tuổi: 20-60.</li>
+                        <li>Phí bảo hiểm: >= 5 triệu đồng/năm.</li>
+                        <li>Người mua hợp đồng BHNT là KH hoặc chồng KH (Trường hợp chồng KH là mua BHNT thì người thụ hưởng/người được bảo hiểm trên Hợp đồng BHNT bắt buộc là KH).</li>
+                        <li>KH không phát sinh khoản vay mới trong vòng 1 tháng gần nhất tính đến thời điểm nộp hồ sơ vay vốn tại LOTTE Finance.</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="insurance-motorbike.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+
+                <!-- 6. Phụ nữ -->
+                <article class="loan-card" data-loan="phunu" style="--img:url('../images/card-phunu.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Phụ nữ</h4>
+                    <p class="loan-sub">Đặc quyền phái đẹp, vay nhanh duyệt dễ</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">50 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Lãi suất<br>(Tạm tính)</span>
+                            <span class="val">2,09%/ tháng</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>KH hoặc chồng sở hữu xe máy có đăng ký ≤ 8 năm (tròn năm) tính đến thời điểm thẩm định</li>
+                        <li>Thu nhập bình quân ≥ 3 triệu</li>
+                        <li>Độ tuổi: 20-60</li>
+                        <li>KH đã từng vay vốn hoặc đang vay tại các tổ chức tín dụng (TCTD)</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="insurance-motorbike.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+
+                <!-- 7. Người có lịch sử vay -->
+                <article class="loan-card" data-loan="tindung" style="--img:url('../images/card-tindungtot.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Người có lịch sử vay ở các tổ chức tín dụng</h4>
+                    <p class="loan-sub">Lịch sử tín dụng tốt - Vay vốn nhanh, ưu tiên</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">100 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Lãi suất<br>(Tạm tính)</span>
+                            <span class="val">1,98%/ tháng</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>KH có khoản và lịch trả nợ tốt tại các công ty tài chính hoặc ngân, thu nhập chỉ từ 3 triệu</li>
+                        <li>Liên hệ Hotline 1900-633-070 để biết thêm chi tiết</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="goodcredit.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+
+                <!-- 8. Lái xe công nghệ -->
+                <article class="loan-card" data-loan="laixe" style="--img:url('../images/card-laixe.png')">
+                    <div class="loan-img" aria-hidden="true"></div>
+
+                    <h4 class="loan-h4">Lái xe công nghệ</h4>
+                    <p class="loan-sub">Vay nhanh, duyệt dễ</p>
+
+                    <ul class="loan-stats">
+                        <li>
+                            <span class="label">Số tiền vay<br>(Tối đa)</span>
+                            <span class="val">60 triệu</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời hạn vay<br>(Tối đa)</span>
+                            <span class="val">24 tháng</span>
+                        </li>
+                        <li>
+                            <span class="label">Thời gian<br>phê duyệt</span>
+                            <span class="val">4 giờ</span>
+                        </li>
+                    </ul>
+
+                    <div class="terms-title">Điều kiện</div>
+                    <ul class="terms-list">
+                        <li>Thu nhập bình quân từ 15 triệu đồng/tháng.</li>
+                        <li>Độ tuổi: 20-60 (tại thời điểm kết thúc khoản vay không quá 60 tuổi).</li>
+                        <li>Khách hàng có HĐLĐ chính thức, thời gian làm việc chính thức ≥ 3 tháng.</li>
+                        <li>Nhận lương qua tài khoản Ngân hàng.</li>
+                        <li>Không có khoản vay mới trong 1 tháng gần nhất.</li>
+                    </ul>
+
+                    <button type="button" class="btn-more js-more">
+                        Xem thêm <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <a href="technologydriver.html" class="btn-pack-img" aria-label="Đăng kí khoản vay">
+                        <img src="images/big-register-button.png" alt="Đăng kí khoản vay">
+                    </a>
+                </article>
+            </div>
+
+            <h2 class="loan-note">(*) Lãi suất tính trên dư nợ ban đầu</h2>
+        </div>
+    </section>
+
+    <!-- ƯỚC TÍNH KHOẢN VAY -->
+    <section class="calc-section" id="uoc-tinh">
+        <div class="container">
+            <h3 class="calc-title">Ước tính khoản vay</h3>
+            <div class="row g-4 align-items-start">
+                <!-- LEFT: sliders -->
+                <div class="col-lg-6">
+                    <div class="calc-group">
+                        <div class="calc-row">
+                            <label class="calc-label">Số tiền vay (VND)</label>
+                            <div class="calc-value" id="amtLabel">255.000.000 VND</div>
+                        </div>
+                        <input id="amt" type="range" min="10000000" max="500000000" step="1000000" value="210000000" class="calc-range">
+                        <div class="calc-minmax">
+                            <span>Tối thiểu 10.000.000 VND</span>
+                            <span>Tối đa 500.000.000 VND</span>
+                        </div>
+                    </div>
+
+                    <div class="calc-group">
+                        <div class="calc-row">
+                            <label class="calc-label">Thời gian vay (tháng)</label>
+                            <div class="calc-value" id="monLabel">33 tháng</div>
+                        </div>
+                        <input id="mon" type="range" min="6" max="60" step="1" value="33" class="calc-range">
+                        <div class="calc-minmax">
+                            <span>Tối thiểu 6 tháng</span>
+                            <span>Tối đa 60 tháng</span>
+                        </div>
+                    </div>
+
+                    <ul class="calc-note">
+                        <li>Lãi suất minh họa: 18%/năm (tính trên dư nợ giảm dần).</li>
+                        <li>Giá trị khoản vay: từ 10 triệu – 500 triệu đồng.</li>
+                        <li>Thời gian vay: từ 06 tháng – 60 tháng.</li>
+                        <li>Lãi suất và chi phí vay, trong đó:
+                            <br>+ Lãi suất tối đa 25,1%/năm (tính trên dư nợ ban đầu).
+                            <br>+ Chi phí vay: Không có bất kỳ chi phí nào ngoài trả phí thanh toán trước hạn hoặc phí trả chậm (nếu có).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="calc-box">
+                        <div class="calc-box-head">Số tiền phải trả hàng tháng</div>
+                        <div class="calc-box-money">
+                            <div class="money-dashed" id="money">9.854.000 VND</div>
+                        </div>
+                        <p class="calc-box-tip">
+                            <span>*Lưu ý:</span> Kết quả tính toán này chỉ mang tính chất tham khảo
+                            và có thể sai lệch nhỏ với kết quả tính toán thực tế
+                        </p>
+                        <a href="loan-application.html" class="btn-tools">
+                            <img src="images/register-button.png">
+                        </a>
+                    </div>
+
+                    <div class="calc-example">
+                        <p>Ví dụ<br>
+                            Với khoản vay tiêu dùng 10 triệu đồng, thời hạn vay 12 tháng, lãi suất 18%/năm tính trên dư nợ giảm dần (tương đương 10%/năm lãi suất tính trên dư nợ ban đầu). Với các phương thức thanh toán nợ gốc, lãi hàng tháng, số tiền hàng tháng phải trả là 917.000 VND.
+                            <br>Trong đó:
+                            <br>• Lãi suất mỗi tháng là: 83.333 VND
+                            <br>• Số tiền nợ gốc mỗi tháng là: 833.667 VND
+                            <br>• Chi phí vay: 0 VND
+                            <br>Nhu vậy, tổng số tiền phải thanh toán bao gồm tiền nợ gốc và lãi là 11.000.000 VND</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUY TRÌNH ĐĂNG KÝ VAY -->
+    <section class="process-section" id="quy-trinh">
+        <div class="container">
+            <h3 class="process-title">Quy trình đăng ký vay</h3>
+
+            <div class="process-grid fixed-card">
+                <!-- 1 -->
+                <article class="step-card">
+                    <div class="step-icon">
+                        <img src="images/loan-register.png" alt="Đăng ký vay">
+                    </div>
+                    <h4 class="step-title"><span>1.</span> Đăng ký vay</h4>
+                    <p>Khách hàng liên hệ Hotline: 1900–6866 hoặc để lại thông tin trên
+                        website, app để được tư vấn miễn phí</p>
+                </article>
+
+                <!-- 2 -->
+                <article class="step-card">
+                    <div class="step-icon">
+                        <img src="images/folder-upload.png" alt="Nộp hồ sơ vay">
+                    </div>
+                    <h4 class="step-title"><span>2.</span> Nộp hồ sơ vay</h4>
+                    <p>Sau khi được nhân viên của LOTTE Finance tư vấn về sản phẩm, Khách hàng
+                        chọn khoản vay phù hợp và nộp hồ sơ trực tiếp hoặc online</p>
+                </article>
+
+                <!-- 3 -->
+                <article class="step-card">
+                    <div class="step-icon">
+                        <img src="images/search-page.png" alt="Thẩm định & phê duyệt">
+                    </div>
+                    <h4 class="step-title"><span>3.</span> Thẩm định &amp;<br>phê duyệt hồ sơ</h4>
+                    <p>Dựa trên hồ sơ Khách hàng cung cấp, LOTTE Finance sẽ thẩm định và gửi đến
+                        Khách hàng kết quả phê duyệt</p>
+                </article>
+
+                <!-- 4 -->
+                <article class="step-card">
+                    <div class="step-icon">
+                        <img src="images/credit-card.png" alt="Nhận giải ngân">
+                    </div>
+                    <h4 class="step-title"><span>4.</span> Nhận giải ngân</h4>
+                    <p>Sau khi ký hợp đồng vay, Khách hàng nhận tiền trực tiếp qua tài khoản
+                        ngân hàng hoặc tại điểm giao dịch từ đối tác của LOTTE Finance</p>
+                </article>
+            </div>
+
+            <div class="process-dots d-md-none">
+                <button class="dot is-active" aria-label="Bước 1"></button>
+                <button class="dot" aria-label="Bước 2"></button>
+                <button class="dot" aria-label="Bước 3"></button>
+                <button class="dot" aria-label="Bước 4"></button>
+            </div>
+
+            <!-- Button bằng ảnh, căn giữa -->
+            <a href="loan-application.html" class="process-btn-img">
+                <img src="images/register-button.png" alt="Đăng kí ngay">
+            </a>
+        </div>
+    </section>
+
+
+    <!-- BÁO CHÍ NÓI GÌ VỀ CHÚNG TÔI -->
+    <section class="press-section" id="tin-tuc">
+        <div class="container">
+            <h3 class="sec-title">Báo chí nói gì về chúng tôi</h3>
+            <div class="news-grid">
+                <a class="news-card" href="https://vnexpress.net/lotte-finance-huong-den-nhom-khach-cong-chuc-vien-chuc-4802806.html" target="_blank" rel="noopener">
+                    <div class="news-thumb">
+                        <img src="images/news1.png" alt="Tiêu đề bài báo 1">
+                    </div>
+                    <div class="news-body">
+                        <h4 class="news-title">Lotte Finance hướng đến nhóm khách hàng công chức, viên chức</h4>
+                        <p class="news-desc">Lotte Finance áp dụng nhiều ưu đãi, tăng hạn mức cho vay với khách hàng là công chức, viên chức hoặc người lao động đang hưởng lương từ ngân sách…</p>
+                        <span class="news-more">Xem thêm <i class="bi bi-box-arrow-up-right"></i></span>
+                    </div>
+                </a>
+                <a class="news-card" href="https://dantri.com.vn/doi-song/lotte-finance-cho-dua-tai-chinh-cho-khach-hang-20240424150017040.htm" target="_blank" rel="noopener">
+                    <div class="news-thumb">
+                        <img src="images/news2.png" alt="Tiêu đề bài báo 2">
+                    </div>
+                    <div class="news-body">
+                        <h4 class="news-title">LOTTE Finance – Chỗ dựa tài chính cho khách hàng</h4>
+                        <p class="news-desc">Từ 8/4 đến 30/9/2024, LOTTE Finance mang đến khách hàng cơ hội sở hữu nhiều phần quà thiết thực, cùng các đặc quyền ưu đãi cho vay tiêu dùng…</p>
+                        <span class="news-more">Xem thêm <i class="bi bi-box-arrow-up-right"></i></span>
+                    </div>
+                </a>
+                <a class="news-card" href="https://vnexpress.net/lotte-finance-day-manh-dich-vu-tai-chinh-tieu-dung-4752632.html" target="_blank" rel="noopener">
+                    <div class="news-thumb">
+                        <img src="images/news3.png" alt="Tiêu đề bài báo 3">
+                    </div>
+                    <div class="news-body">
+                        <h4 class="news-title">Lotte Finance đẩy mạnh dịch vụ tài chính tiêu dùng</h4>
+                        <p class="news-desc">Sau khi được Ngân hàng Nhà nước chấp thuận tăng vốn điều lệ, Lotte Finance đẩy mạnh…</p>
+                        <span class="news-more">Xem thêm <i class="bi bi-box-arrow-up-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI -->
+    <section class="testi-section" id="khach-hang">
+        <div class="container">
+            <h3 class="sec-title">Khách hàng nói gì <br>về chúng tôi</h3>
+            <img class="title-underline" src="images/icon-under-title.png" alt="" />
+
+            <div class="testi-grid">
+                <article class="testi-card">
+                    <p class="testi-quote">
+                        Nhờ LOTTE Finance tôi có thể cân đối các nhu cầu mua sắm hằng ngày và chủ động chi trả cho các tình huống khẩn cấp.
+                    </p>
+                    <div class="testi-person">
+                        <img class="avatar" src="images/van-anh.png" alt="Chị Vân Anh">
+                        <div class="person-name">Chị Vân Anh</div>
+                        <div class="person-role">Giáo viên</div>
+                    </div>
+                </article>
+                <article class="testi-card">
+                    <p class="testi-quote">
+                        Là người có 2 con nhỏ, chi phí ăn học cho các con luôn là mối quan tâm lớn. LOTTE Finance đã giúp tôi có một khoản tiền dự phòng
+                        để yên tâm chăm lo cho các con.
+                    </p>
+                    <div class="testi-person">
+                        <img class="avatar" src="images/hong-anh.png" alt="Chị Hồng Anh">
+                        <div class="person-name">Chị Hồng Anh</div>
+                        <div class="person-role">Nội trợ</div>
+                    </div>
+                </article>
+                <article class="testi-card">
+                    <p class="testi-quote">
+                        Tôi hoàn toàn hài lòng khi vay tại LOTTE Finance. Các thủ tục vay rất đơn giản và tôi đã nhanh được tiến giải ngân nhanh chóng.
+                    </p>
+                    <div class="testi-person">
+                        <img class="avatar" src="images/tien-hung.png" alt="Anh Tiến Hưng">
+                        <div class="person-name">Anh Tiến Hưng</div>
+                        <div class="person-role">Quản đốc phân xưởng</div>
+                    </div>
+                </article>
+            </div>
+            <div class="testi-nav d-md-none" aria-label="Điều hướng đánh giá">
+                <button class="testi-prev" type="button" aria-label="Trước">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="testi-next" type="button" aria-label="Sau">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIỚI THIỆU CÔNG TY -->
+    <section class="intro-section" id="ve-chung-toi">
+        <div class="container">
+            <h3 class="sec-title">Giới thiệu công ty</h3>
+
+            <div class="row align-items-center g-4">
+                <!-- Left: copy -->
+                <div class="col-lg-6">
+                    <div class="intro-copy">
+                        <p>Với phương châm “Gia tăng giá trị, nâng tầm cuộc sống”, LOTTE Finance
+                            đồng hành cùng khách hàng trong mọi nhu cầu tài chính hằng ngày như cho vay tiêu dùng tín chấp,
+                            cho vay mua ô tô, dịch vụ mua trước trả sau, phát hành thẻ tín dụng,…</p>
+                        <p>LOTTE Finance luôn nỗ lực đi đầu thị trường về sự minh bạch trong giao dịch tài chính,
+                            nhằm cung cấp những sản phẩm, dịch vụ uy tín tới khách hàng và góp phần đẩy lùi tín dụng đen tại Việt Nam.</p>
+
+                        <!-- Nút ảnh căn giữa -->
+                        <a href="loan-application.html" class="btn-img-center">
+                            <img src="images/register-button.png" alt="Đăng kí ngay">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: image -->
+                <div class="col-lg-6">
+                    <div class="intro-photo">
+                        <img src="images/introduce.png" alt="LOTTE Finance">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CÂU HỎI THƯỜNG GẶP -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h3 class="sec-title">Câu hỏi thường gặp</h3>
+
+            <div class="faq-list">
+                <!-- item 1 – mở sẵn -->
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+                        Ngoài lãi phải trả đều đặn, khi vay tại LOTTE Finance tôi còn phải trả những loại phí nào?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq1" role="region">
+                        <p>LOTTE Finance (LFVN) hỗ trợ làm thủ tục, hồ sơ vay hoàn toàn miễn phí cho khách hàng (KH).
+                            Dù hồ sơ được duyệt vay hay không, Quý khách không phải đóng bất kỳ chi phí nào trước khi ký hợp đồng vay.</p>
+                    </div>
+                </div>
+
+
+                <!-- item 2 -->
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+                        Khoản trả góp của tôi sẽ được tính như thế nào?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq2" role="region">
+                        <p>Khoản thanh toán đều hàng tháng, trong đó lãi suất được tính trên cơ sở dư nợ giảm dần và số tiền gốc phải trả được điều chỉnh để đảm bảo khoản thanh toán đều vào mỗi tháng (ngoại trừ kỳ đầu và kỳ cuối, số tiền phải trả hàng tháng có thể khác).</p>
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+                        Lịch sử tín dụng của tôi sẽ bị ảnh hưởng như thế nào khi Khoản Vay bị quá hạn thanh toán?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq3" role="region">
+                        <p>Tùy theo số ngày quá hạn thanh toán khoản vay mà LFVN sẽ phân loại các nhóm nợ tín dụng khác nhau theo quy định nợ của Ngân hàng Nhà nước và báo cáo về trung tâm CIC. Đồng thời LFVN sẽ áp dụng lãi chậm trả theo quy định của hợp đồng tín dụng.</p>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+                        Số tiền tối đa tôi có thể vay là bao nhiêu?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq4" role="region">
+                        <p>KH được xem xét theo từng sản phẩm KH đăng kí. LFVN đang hỗ trợ vay lên đến 500 triệu. Để biết thêm chi tiết, KH vui lòng liên hệ tổng đài 1900 633 070</p>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+                        Thời hạn vay tối đa có thể áp dụng cho tôi là bao lâu?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq5" role="region">
+                        <p>Thời hạn vay linh hoạt theo từng sản phẩm và nhu cầu của KH, tối thiểu 06 tháng - tối đa 60 tháng. Tuy nhiên, thời hạn vay còn phụ thuộc vào độ tuổi lao động của KH, trong đó độ tuổi tối đa kết thúc hợp đồng vay là 60-65 tuổi.</p>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+                        Thời gian giải ngân khoản vay mất bao lâu?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq6" role="region">
+                        <p>Tùy vào gói vay KH lựa chọn mà có thời gian thẩm định và duyệt hồ sơ vay khác nhau. Kể từ thời điểm KH cung cấp đủ hồ sơ, khoản vay sẽ được giải ngân chỉ từ 4 giờ.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+                        Trường hợp tôi muốn thanh toán trước hạn thì phải làm thế nào?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq7" role="region">
+                        <p>KH lưu ý chỉ được tất toán trước hạn toàn bộ khoản vay không được tất toán trước hạn một phần
+                            KH vui lòng liên hệ số hotline 1900 633 070 bằng số điện thoại Bên vay đã đăng ký để có thông tin về số tiền cũng như cách thức thanh toán. Khoản vay cũng có thể được hệ thống tự động tất toán trước hạn khi KH nộp đủ số tiền cần thiết cho LOTTE Finance.</p>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+                        Bảo hiểm khoản vay là gì? Có bắt buộc mua bảo hiểm khi ký hợp đồng vay hay không?
+                        <span class="chev" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="faq8" role="region">
+                        <p>Bảo hiểm khoản vay là số tiền mà khách hàng chi trả để mua bảo hiểm cho hợp đồng vay của mình. Khi khách hàng mua bảo hiểm, trong trường hợp khách hàng không may gặp phải những rủi ro không lường trước được sau khi vay tín chấp, khiến khách hàng mất khả năng thanh toán, thì công ty bảo hiểm sẽ trả nợ thay khách hàng. Bảo hiểm khoản vay không chỉ bảo vệ khách hàng và gia đình trước các rủi ro, mà còn là một tiêu chí giúp khoản vay của khách hàng dễ dàng được duyệt hơn. Bảo hiểm khoản vay là chi phí không bắt buộc khi ký hợp đồng vay, khách hàng có quyền lựa chọn việc mua hoặc không mua bảo hiểm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="validationPopup" class="popup-overlay">
+        <div class="popup-card">
+            <img id="popupIcon" src="" alt="" class="popup-icon">
+
+            <h3 id="popupTitle" class="popup-title">Thất bại</h3>
+            <div id="popupMessage" class="popup-message">
+            </div>
+            <a href="#" id="popupCloseBtn" class="popup-btn-img">
+                <img src="" alt="">
+            </a>
+        </div>
+    </div>
+    <div id="otpPopup" class="popup-overlay">
+        <div class="popup-card">
+            <img src="images/otp-verify.png" alt="Xác nhận OTP" class="popup-icon" style="width: 64px; height: 64px; margin-bottom: 12px;">
+            <h3 class="popup-title" style="color: rgba(237, 27, 36, 1); font-size: 19px; line-height: 128%; margin-bottom: 16px; font-weight: 700">
+                Quý khách vui lòng<br> xác nhận số điện thoại<br> để tiếp tục đăng ký
+            </h3>
+            <p class="otp-instruction">Quý khách vui lòng mở tin nhắn Zalo từ tài khoản LOTTE Finance để nhận mã OTP và nhập dưới đây.</p>
+            <div class="otp-field">
+                <input type="tel" class="otp-input" id="otp-input-main" maxlength="6" pattern="\d*" inputmode="numeric" />
+            </div>
+            <p class="otp-instruction">Nếu Quý khách không có tài khoản Zalo, vui lòng kiểm tra tin nhắn điện thoại (SMS)</p>
+            <p id="countdown" class="otp-countdown"></p>
+            <a href="#" id="btn-change-phone" class="popup-btn-img">
+                <img src="images/change-phone-btn.png" alt="Thay đổi số điện thoại">
+            </a>
+            <input type="hidden" id="prev-form" />
+        </div>
+    </div>
+    <div class="lf-sticky-cta" id="lf-sticky-cta" aria-label="Khối hành động nổi">
+        <a class="lf-counter" href="#khach-hang" aria-label="Khách hàng đã vay">
+    <span class="lf-counter-icon">
+      <img src="images/icon-users.png" alt="">
+    </span>
+            <div class="lf-counter-text">
+                <div id="scrolling-counter" class="scrolling-counter"></div>
+                <small>Khách hàng đã vay<br>tại LOTTE Finance</small>
+            </div>
+        </a>
+
+        <a class="lf-round-btn lf-phone" href="tel:1900633070" aria-label="Gọi hotline">
+            <img src="images/icon-phone.png" alt="">
+        </a>
+
+        <a class="lf-round-btn lf-chat" href="https://m.me/LOTTEFinanceVietnam?locale=vi_VN" aria-label="Nhắn tin tư vấn">
+            <img src="images/icon-chat.png" alt="">
+        </a>
+    </div>
+
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="footer">
+    <div class="container">
+        <div class="footer-brand text-center">
+            <img src="images/logo-footer.png" class="ft-logo" alt="LOTTE FINANCE">
+        </div>
+        <div class="footer-top row align-items-start justify-content-center">
+            <div class="col-lg-4 ft-col-center">
+                <h6 class="ft-heading">Đăng ký khoản vay</h6>
+                <p class="ft-text">
+                    1900–633–070<br>
+                    Thời gian hỗ trợ và tư vấn Khách hàng:<br>
+                    Thứ 2 đến thứ 6: 8:00 – 18:00 | Thứ 7: 8:00 – 16:00
+                </p>
+            </div>
+            <div class="col-lg-4 ft-col-center">
+                <h6 class="ft-heading">Chăm sóc khách hàng</h6>
+                <p class="ft-text">1900–6866 #1</p>
+
+                <h6 class="ft-heading mt-3">Website</h6>
+                <p class="ft-text">
+                    <a class="ft-link" href="https://www.lottefinance.vn" target="_blank" rel="noopener">
+                        www.lottefinance.vn
+                    </a>
+                </p>
+            </div>
+            <div class="col-lg-4 ft-col-center">
+                <h6 class="ft-heading">Khám phá LOTTE Finance Mobile</h6>
+                <div class="ft-apps">
+                    <div class="ft-qr-wrap">
+                        <img src="images/qr.png" class="ft-qr" alt="QR code">
+                    </div>
+                    <div class="ft-badges">
+                        <a href="#" class="store"><img src="images/google-play.png" alt="Get it on Google Play"></a>
+                        <a href="#" class="store"><img src="images/app-store.png"   alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ft-divider"></div>
+
+        <div class="footer-mid text-center">
+            <p class="ft-copy">© 2024 Bản quyền thuộc về LOTTE FINANCE</p>
+            <p class="ft-desc">
+                Đơn vị chủ quản: Công ty Tài chính TNHH MTV LOTTE VIỆT NAM (LOTTE Finance).<br>
+                Địa chỉ: Tầng 12A tháp Tây, Trung tâm Lotte Hà Nội, 54 Liễu Giai, phường Giảng Võ, TP Hà Nội, Việt Nam.<br>
+                Hotline: 1900 6866.<br>
+                Mã số doanh nghiệp: 0103172804 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 31/12/2008
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<script type="text/javascript" src="js/dist/jquery.min.js"></script>
+<script type="text/javascript" src="js/dist/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" src="./js/toast.js"></script>-->
+<!--<script type="text/javascript" src="./env.js"></script>-->
+<script src="https://www.google.com/recaptcha/api.js?render=GOOGLE_SITE_KEY_TEMP"></script>
+
+</main>
+</body>
+</html>
