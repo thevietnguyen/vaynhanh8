@@ -1972,6 +1972,43 @@ a{text-decoration:none}
   animation-duration: .9s;
 }
 
+@media (max-width: 991.98px) {
+
+  body[data-page-loan] #hero-detail,
+  body[data-page-loans] #hero-detail {
+    display: none;
+  }
+
+  body[data-page-loan] #goi-vay,
+  body[data-page-loans] #goi-vay {
+    display: none;
+  }
+
+  body[data-page-loan] > main > .loan-card,
+  body[data-page-loans] > main > .loan-card {
+    margin-top: 50px;
+    max-width: 450px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 992px) {
+
+
+  body[data-page-loan] #goi-vay,
+  body[data-page-loans] #goi-vay {
+    display: none;
+  }
+
+  body[data-page-loan] #hero-detail,
+  body[data-page-loans] #hero-detail {
+    display: block;
+  }
+}
+
 
 
 
