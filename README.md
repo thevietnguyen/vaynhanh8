@@ -1,8 +1,3 @@
-# =============================
-#  LOTTE Finance - Proxy Config
-# =============================
-
-# Main NGINX configuration
 user  nginx;
 worker_processes  auto;
 
@@ -37,10 +32,10 @@ http {
         # return 301 https://$host$request_uri;
 
         # -----------------------------
-        # Proxy for /vaynhanh8
+        # Proxy for /aunhánh8
         # -----------------------------
-        location /vaynhanh8 {
-            rewrite ^/vaynhanh8$ https://$host/$request_uri permanent;
+        location /aunhánh8 {
+            rewrite ^/aunhánh8$ https://$host/$request_uri permanent;
 
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -52,7 +47,7 @@ http {
             proxy_pass_header Server;
             proxy_cache_bypass $http_upgrade;
 
-            proxy_pass http://ldp-frontend-vay-clone08:8080/vaynhanh8;
+            proxy_pass http://ldp-frontend-vay-clone08:8080/aunhánh8;
         }
 
         # -----------------------------
