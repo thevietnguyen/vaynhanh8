@@ -118,14 +118,16 @@ a{text-decoration:none}
   pointer-events:none;
 }
 .hero-form{
-  position:relative; z-index:1;
-  max-width:560px; margin-left:auto;
+  position:relative;
+  z-index:1;
+  max-width:560px;
+  margin-left:auto;
   padding-top:12px;
 }
 .question{
   color:#fff;
   font-weight:600;
-  font-size:28px;
+  font-size:24px;
   line-height:1.25;
   text-shadow:0 2px 18px rgba(0,0,0,.15);
   margin-bottom:18px;
@@ -145,7 +147,13 @@ a{text-decoration:none}
 }
 
 
-.list-choice{display:flex; flex-direction:column; gap:16px}
+.list-choice{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-width: 408px;
+  margin: auto;
+}
 .list-choice .item{
   display:flex; align-items:center; gap:14px;
   background:#fff; color:rgba(0, 0, 0, 1);
@@ -156,7 +164,15 @@ a{text-decoration:none}
   transition:transform .15s ease, box-shadow .15s ease;
 }
 .list-choice .item i{font-size:20px; color:#EC1848}
-.list-choice .item span{font-weight:400; font-size: 20px}
+.list-choice .item span {
+  font-weight: 400;
+  font-size: 20px;
+  white-space: nowrap;       /* Không xuống dòng */
+  overflow: hidden;          /* Ẩn phần thừa */
+  text-overflow: ellipsis;   /* Hiện “...” nếu quá dài */
+  flex: 1 1 auto;            /* Cho phép co giãn vừa khung */
+  min-width: 0;              /* Cần cho ellipsis hoạt động trong flexbox */
+}
 .list-choice .item:hover{
   transform:translateY(-2px);
   /*box-shadow:0 20px 48px rgba(171, 167, 175, 1);*/
@@ -210,7 +226,7 @@ a{text-decoration:none}
 }
 
 .benefit-card{
-  width:220px; height:220px;
+  width:220px; height:200px;
   background:#fff;
   border-radius:20px;
   border:1px solid #F0E3EA;
@@ -220,12 +236,26 @@ a{text-decoration:none}
   display:flex; align-items:center; justify-content:center;
 }
 .benefit-inner{
-  display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
-  text-align:center; gap:12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 0 14px;
+  gap:12px;
 }
 .benefit-img{ width:64px; height:auto; display:block; }
-.benefit-text{ margin:0; color:#151515; font-weight:800; line-height:1.35; }
+.benefit-text{
+  margin: 0 auto;
+  color: rgba(31, 20, 20, 1);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.28;
+  max-width: 191px;
+  white-space: nowrap;
+  word-break: keep-all;
+  text-align: center;
+}
 .benefit-text .hl{ color:rgba(237, 27, 36, 1); }
 
 
@@ -571,7 +601,7 @@ a{text-decoration:none}
   width:306px; height:300px;
   background:#fff; border-radius:16px; text-align:center;
   box-shadow:0 16px 40px rgba(171, 167, 175, 1);;
-  padding:22px 18px;
+  padding:40px 18px;
   display:flex; flex-direction:column; align-items:center;
 }
 .step-icon{ height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:6px; }
@@ -792,9 +822,9 @@ a{text-decoration:none}
 }
 
 .faq-item.is-open .faq-a{ display:block; }
-.faq-q .chev{ flex:0 0 auto; width:26px; height:26px; border-radius:50%; border:2px solid #8B8B8B;
+.faq-q .chev{ flex:0 0 auto; width:26px; height:26px; border-radius:50%; border:2px solid rgba(0, 0, 0, 1);
   display:inline-flex; align-items:center; justify-content:center; transition:transform .2s ease; }
-.faq-q .chev::after{ content:""; width:7px; height:7px; border:2px solid #8B8B8B;
+.faq-q .chev::after{ content:""; width:7px; height:7px; border:2px solid rgba(0, 0, 0, 1);
   border-top:0; border-left:0; transform:rotate(45deg); transition:transform .2s ease; }
 .faq-item.is-open .faq-q .chev::after{ transform:rotate(225deg); } /* xoay lên khi mở */
 
@@ -1038,6 +1068,11 @@ a{text-decoration:none}
   padding: 32px 40px;
 }
 
+#apply-form {
+  max-width: 408px;
+  margin: 0 auto;
+}
+
 .apply-title {
   text-align: center;
   font-size: 29px;
@@ -1061,23 +1096,26 @@ a{text-decoration:none}
   display: block;
   width: 100%;
   height: 52px;
-  padding: 12px 16px;
+  padding: 12px 25px;
   border-radius: 10px;
   border: 1px solid rgba(245, 243, 247, 1);
   background: rgba(245, 243, 247, 1);
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 400;
   outline: none;
   transition: border-color .2s, box-shadow .2s;
 }
 
 .f-input::placeholder {
-  color: #adb5bd;
+  color: rgba(171, 167, 175, 1);
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .f-input:focus {
-  border-color: rgba(237, 27, 36, 1);
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(236, 24, 72, .15);
+  /*border-color: rgba(237, 27, 36, 1);*/
+  /*background: #fff;*/
+  /*box-shadow: 0 0 0 3px rgba(236, 24, 72, .15);*/
 }
 
 .f-err {
@@ -1093,7 +1131,7 @@ a{text-decoration:none}
 .f-check {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 5px;
   font-size: 14px;
   color: #212529;
   margin: 16px 0 8px;
@@ -1112,11 +1150,19 @@ a{text-decoration:none}
   text-decoration: underline;
 }
 
+.f-check span{
+  display: inline-block;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
 .apply-note {
   font-size: 13px;
   color: rgba(15, 11, 171, 1);
   margin: 20px 0 12px;
   text-align: center;
+  text-decoration-line: underline;
 }
 
 .btn-apply {
@@ -1311,19 +1357,28 @@ a{text-decoration:none}
 
   .benefit-section {
     height: auto;
-    padding: 48px 0;
+    padding: 48px 0 56px;
   }
+
   .benefit-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 185px);
+    gap: 5px;
     max-width: 500px;
     margin: 0 auto;
   }
+
   .benefit-card {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
+    width: 185px;
+    height: 180px;
+    aspect-ratio: auto;
+    box-shadow: 0 6px 12px rgba(0,0,0,.06);
   }
+
+  .benefit-text {
+    font-size: 14px;
+  }
+
+
 
   .process-section .container {
     padding: 0;
@@ -1682,6 +1737,14 @@ a{text-decoration:none}
     font-weight: 400;
   }
 
+  .apply-card{
+    padding: 24px 0;      /* was: 32px 40px -> rộng thêm 48px */
+    max-width: 100%;         /* để card bám full màn hình */
+  }
+  #apply-form{
+    max-width: 100%;         /* bỏ giới hạn 408px để ăn theo card */
+  }
+
 }
 
 .popup-overlay {
@@ -1983,6 +2046,9 @@ a{text-decoration:none}
   body[data-page-loans] #goi-vay {
     display: none;
   }
+
+  body[data-page-loan] #loi-ich,
+  body[data-page-loans] #loi-ich { display: none; }
 
   body[data-page-loan] > main > .loan-card,
   body[data-page-loans] > main > .loan-card {

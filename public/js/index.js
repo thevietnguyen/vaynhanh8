@@ -246,7 +246,7 @@ $(document).ready(function() {
                           type: 'success',
                           title: 'Thành công',
                           customText: 'Cảm ơn Quý khách đã đăng ký thông tin. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất!',
-                          iconSrc: 'images/success-icon.png',
+                          iconSrc: 'images/verified.png',
                           buttonSrc: 'images/close-btn.png',
                           buttonAlt: 'Đóng'
                         });
@@ -616,8 +616,12 @@ document.addEventListener('DOMContentLoaded', function() {
           if (moreButton) {
             moreButton.remove();
           }
-
           mainContainer.prepend(card);
+          const btn = card.querySelector('a.btn-pack-img');
+          if (btn) {
+            const dir = location.pathname.replace(/[^/]*$/, '');
+            btn.setAttribute('href', dir + 'loan-application.html');
+          }
         }
       });
 
@@ -628,6 +632,31 @@ document.addEventListener('DOMContentLoaded', function() {
         Array.from(prependedCards).reverse().forEach(card => mainContainer.prepend(card));
       }
     }
+  })();
+
+  (() => {
+    const loanSection = document.getElementById('goi-vay');
+    if (!loanSection) return;
+    function revealAndScroll() {
+      loanSection.hidden = false;
+      loanSection.style.display = 'block';
+      document.body.classList.remove('mobile-detail-view-is-open');
+
+      requestAnimationFrame(() => {
+        loanSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    document.querySelectorAll('a[href="#goi-vay"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        revealAndScroll();
+        if (location.hash !== '#goi-vay') history.replaceState(null, '', '#goi-vay');
+      });
+    });
+    if (location.hash === '#goi-vay') revealAndScroll();
+    window.addEventListener('hashchange', () => {
+      if (location.hash === '#goi-vay') revealAndScroll();
+    });
   })();
 
 });
